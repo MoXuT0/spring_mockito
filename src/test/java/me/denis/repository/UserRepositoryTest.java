@@ -28,7 +28,7 @@ public class UserRepositoryTest {
     @Test
     @DisplayName("Тест на заполенный список пользователей")
     public void isUserListFilled() {
-        Assertions.assertEquals(userRepository.getUsers().toString(), userRepository.getUsers().toString());
+        Assertions.assertTrue(userRepository.getUsers().contains(testUser));
     }
 
     @Test
