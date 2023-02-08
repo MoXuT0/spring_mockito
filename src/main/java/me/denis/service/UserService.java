@@ -15,8 +15,8 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<String> getAllLogins (List<User> userList) {
-        return userList.stream()
+    public List<String> getAllLogins () {
+        return userRepository.getUsers().stream()
                 .map(user -> user.getLogin())
                 .collect(Collectors.toList());
     }
